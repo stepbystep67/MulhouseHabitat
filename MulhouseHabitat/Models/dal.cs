@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 // data access layer
 // aussi appeler dao = data acces object
@@ -22,11 +23,11 @@ namespace MulhouseHabitat.Models
         }
 
        public void Dispose()
-        {
+       {
 
             db.Dispose();
             
-        }
+       }
 
         // ajout d'un logement
         public void AddLogement(Logement logement)

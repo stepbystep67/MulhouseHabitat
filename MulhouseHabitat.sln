@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulhouseHabitat", "MulhouseHabitat\MulhouseHabitat.csproj", "{F1ADE7A4-0C0A-4658-BB01-666E501D1037}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject_ecf", "..\UnitTestProject_ecf\UnitTestProject_ecf.csproj", "{28196BF7-D8B7-424D-9ABF-B8C522059C8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject_ecf", "UnitTestProject_ecf\UnitTestProject_ecf.csproj", "{379C396B-62FF-406B-AD1E-702316B63D30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F1ADE7A4-0C0A-4658-BB01-666E501D1037}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1ADE7A4-0C0A-4658-BB01-666E501D1037}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1ADE7A4-0C0A-4658-BB01-666E501D1037}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28196BF7-D8B7-424D-9ABF-B8C522059C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28196BF7-D8B7-424D-9ABF-B8C522059C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28196BF7-D8B7-424D-9ABF-B8C522059C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28196BF7-D8B7-424D-9ABF-B8C522059C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{379C396B-62FF-406B-AD1E-702316B63D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{379C396B-62FF-406B-AD1E-702316B63D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{379C396B-62FF-406B-AD1E-702316B63D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{379C396B-62FF-406B-AD1E-702316B63D30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
