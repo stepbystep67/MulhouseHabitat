@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MulhouseHabitat.Models.Logement>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pieces)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surface)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LibreOccupe)
+        </th>
+        <th></th>
+    </tr>
+    <img src="~/logo_logement.jpg" width="42" height="42" alt="logo logement">
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pieces)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surface)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LibreOccupe)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

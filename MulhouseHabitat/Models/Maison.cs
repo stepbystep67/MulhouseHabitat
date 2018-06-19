@@ -11,11 +11,7 @@ namespace MulhouseHabitat.Models
 
     public class Maison
     {
-
-
-        private Maison maison;
-
-        private List<Maison> maisons;
+        
 
         public int Id { get; set; }
 

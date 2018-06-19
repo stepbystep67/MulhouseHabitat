@@ -13,9 +13,7 @@ namespace MulhouseHabitat.Models
     {
 
 
-        private Appartement appartement;
-
-        private List<Appartement> appartements;
+      
 
         public int Id { get; set; }
 

@@ -15,7 +15,7 @@ namespace MulhouseHabitat.Controllers
     public class LogementController : Controller
     {
 
-        public LogementController logement = new LogementController();
+       
 
         Dal dal;
 
@@ -32,8 +32,61 @@ namespace MulhouseHabitat.Controllers
         {
 
 
-            return View("Index");
+            return View(dal.GetLogement());
         }
+
+        [HttpPost]
+        public ActionResult Create(FormCollection formcollection)
+        {
+
+            try
+            {
+
+                Logement logement = new Logement();
+
+                logement.LibreOccupe = bool.Parse(formcollection["LibreOccupe"]);
+
+                logement.Pieces = int.Parse(formcollection["Pieces"]);
+
+                logement.Surface = formcollection["Surface"];
+
+                logement.Id = int.Parse(formcollection["Id"]);
+
+                return View("Index"); 
+
+            }
+            catch
+            {
+
+                return View(dal.GetLogement());
+            }
+
+
+
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Edit(int id)// reagi avec get mais pas post
+        {
+
+            Logement exist = dal.GetLogement().FirstOrDefault(x => x.Id == id);
+
+          
+          if (exist != default(Logement))
+          {
+                
+                 // affiche le produit 
+                 return View(exist);
+
+          }
+            
+             // reaffiche la liste dorigine
+             return RedirectToAction("index");
+            
+         }
+
+
+     
 
 
     }

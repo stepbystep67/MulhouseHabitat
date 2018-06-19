@@ -21,7 +21,7 @@ namespace UnitTestProject_ecf
                 dal.AddLogement(new Logement { LibreOccupe = true, Pieces = 10, Surface = "1445m2" });
 
                 // instanciation d'une liste de produit ou l'on y mets le resultat de la méthode qui retourne une liste
-                List<Logement> logement = dal.GetLogements();
+                List<Logement> logement = dal.GetLogement();
 
                 Assert.AreEqual("", logement[0].Id);
 

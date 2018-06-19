@@ -4,15 +4,20 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
+
 // data access layer
 // aussi appeler dao = data acces object
 // fais le lien entre le model c# et celui asp.net
 namespace MulhouseHabitat.Models
 {
+
+
     public class Dal : IDisposable
     {
 
+
         private BddContext db;
+
 
         // constructeur par defaut
         public Dal()
@@ -22,12 +27,20 @@ namespace MulhouseHabitat.Models
 
         }
 
+
        public void Dispose()
        {
 
             db.Dispose();
             
        }
+
+        public List<Logement> GetLogement()
+        {
+
+            return db.Logements.ToList();
+
+        }
 
         // ajout d'un logement
         public void AddLogement(Logement logement)
@@ -46,15 +59,29 @@ namespace MulhouseHabitat.Models
             return db.Logements.FirstOrDefault(x => (x.Id == _id));
         }
 
-        public List<Logement> GetLogements()
+        // obtient la liste 
+        public List<Logement> GetLogements(Predicate<Logement> predicate)
         {
 
-            return db.Logements.ToList();
+            List<Logement> result = new List<Logement>();
 
+            foreach(Logement l in db.Logements)
+            {
+
+                if(predicate(l))
+                {
+
+                    result.Add(l);
+
+                }
+
+            }
+
+            return result;
         }
-
-
-}
+      
+       
+    }
 
 
 }
