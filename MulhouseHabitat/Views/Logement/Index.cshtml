@@ -5,42 +5,66 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2 style="background-color:red">
+    
+        Liste des logements à louer
+</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table width="100%">
+
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Pieces)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Surface)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LibreOccupe)
-        </th>
-        <th></th>
+        <!-- ligne -->
+        <td>@Html.DisplayNameFor(Model => Model.Pieces) </td><!-- cellule-->
+        <td>@Html.DisplayNameFor(Model => Model.Surface)</td>
+        <td>@Html.DisplayNameFor(Model => Model.Id)</td>
+        <td>@Html.DisplayNameFor(Model => Model.LibreOccupe)</td>
+        <td>Actions</td>
     </tr>
-    <img src="~/logo_logement.jpg" width="42" height="42" alt="logo logement">
-@foreach (var item in Model) {
     <tr>
+        <td>Data #1  </td>
+        <td>Data #2 </td>
+        <td>Data #3 </td>
+        <td>Data #4 </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Pieces)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Surface)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LibreOccupe)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @foreach (var item in Model)
+            {
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) 
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            }
         </td>
     </tr>
-}
+    <tr>
+        <td>Data #1 </td>
+        <td>Data #2 </td>
+        <td>Data #3 </td>
+        <td>Data #4 </td>
+        <td>
+            @foreach (var item2 in Model)
+            {
+            @Html.ActionLink("", "Edit", new { id = item2.Id }) 
+            @Html.ActionLink("Details", "Details", new { id = item2.Id }) 
+            @Html.ActionLink("Delete", "Delete", new { id = item2.Id })
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Data #1 </td>
+        <td>Data #2 </td>
+        <td>Data #3 </td>
+        <td>Data #4 </td>
+        <td>
+
+            @foreach (var item3 in Model)
+            {
+
+             @Html.ActionLink("Edit", "Edit", new { id = item3.Id }) 
+             @Html.ActionLink("Details", "Details", new { id = item3.Id }) 
+             @Html.ActionLink("Delete", "Delete", new { id = item3.Id })
+
+             }
+
+        </td>
+    </tr>
 
 </table>

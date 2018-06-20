@@ -86,8 +86,23 @@ namespace MulhouseHabitat.Controllers
          }
 
 
-     
+        public ActionResult Details(Logement _logement)
+        {
 
+            Logement logement = dal.GetLogement().FirstOrDefault(x => (x.Id == _logement.Id));
+
+            if(logement != default(Logement))
+            {
+
+                return View(dal.GetLogement(logement.Id));
+
+            }
+
+            return RedirectToAction("Index");
+
+        }
+     
+        
 
     }
 
